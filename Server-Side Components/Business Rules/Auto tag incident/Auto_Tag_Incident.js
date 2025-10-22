@@ -57,6 +57,14 @@
         entryGR.addQuery("label", labelSysId);
         entryGR.query();
 
+        (function execute(inputs, outputs) {
+    var inc = new GlideRecord('incident');
+    if (inc.get(inputs.incident_sys_id) && inc.state == 6) { // 6 = Resolved
+        inc.state = 7; // 7 = Closed
+        inc.update();
+    }
+})(inputs, outputs);
+
         if (!entryGR.hasNext()) {
 
             var newEntry = new GlideRecord("label_entry");
