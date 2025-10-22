@@ -31,3 +31,6 @@ Prevent duplicates by verifying existing entries before insertion.
 📊 Analytics Ready: Enables trend and problem management reporting.
 
 🧠 Reusable Logic: Extendable to Change Requests or Catalog Items.
+
+
+Automatically closes incidents marked as Resolved
